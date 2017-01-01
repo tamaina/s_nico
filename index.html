@@ -69,6 +69,9 @@ if(urlParam) {
   if(paramArray.y != void(8901) && Number.isSafeInteger(Number(paramArray.y))){
     $('input[name="y_point"]').val(Number(paramArray.y));
   }
+  if(paramArray.r != void(8901) && Number.isSafeInteger(Number(paramArray.r))){
+    $('input[name="watch_r]').val(Number(paramArray.r));
+  }
   if(paramArray.bgcolor != void(1341) && paramArray.bgcolor.search('^[\w]+$')){
     $('input[name="color-b"]').val(paramArray.bgcolor);
   }
@@ -85,7 +88,7 @@ BodyCSS += 'background-color: ' + orderform[0].value + ';';
 
 watchWidth = Number(orderform[3].value) / 9 * 16;
 
-WatchCSS += 'top: ' + orderform[1].value + 'px; left: ' + orderform[2].value + 'px; height: ' + orderform[3].value + 'px; width: ' + watchWidth + 'px;';
+WatchCSS += 'top: ' + orderform[1].value + 'px; left: ' + orderform[2].value + 'px; height: ' + orderform[3].value + 'px; width: ' + watchWidth + 'px; transform: rotate(' + orderform[4].value + 'deg);';
 
 $('body').attr('style',BodyCSS);
 $('#watch').attr('style',WatchCSS).attr('height',orderform[3].value).attr('width',watchWidth);
@@ -96,9 +99,9 @@ function ChangeSrc(){
 
 var orderform = $('#orderform').serializeArray();
 
-watchSource = 'http://embed.nicovideo.jp/watch/' + orderform[4].value;
+watchSource = 'http://embed.nicovideo.jp/watch/' + orderform[5].value;
 
-thumbSource = 'http://ext.nicovideo.jp/thumb/' + orderform[4].value;
+thumbSource = 'http://ext.nicovideo.jp/thumb/' + orderform[5].value;
 
 $('#watch').attr('src',watchSource);
 $('#thumb').attr('src',thumbSource);
@@ -157,7 +160,12 @@ $(document).ready(function(){
 <p>
 <label>高さ:<input type="number" step="1" name="watch_h" value="800" class="form-number form-control" />px</label>
 ※niconicoの仕様上16:9固定です
+</p>
+<p>
+<label>回転:<input type="number" step="1" name="watch_r" value="0" class="form-number form-control" />°</label>
+</p>
 <h4>動画ID</h4>
+<p>
 <input type="text" name="nico_id" id="nico_id" value="sm9" class="form-control" pattern="^[\w]+$" maxlength="16" />
 </p>
 </form>
