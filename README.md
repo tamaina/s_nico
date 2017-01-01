@@ -48,6 +48,12 @@ http://tamaina.bikkuri.link/s_nico/?id=sm2064366&h=100
 
 http://tamaina.bikkuri.link/s_nico/?id=sm8628149&h=480&x=128&y=128
 
+#### r
+
+回転を指定します。
+
+http://tamaina.bikkuri.link/s_nico/?id=sm8628149&h=480&x=128&y=128
+
 ## Others
 
 **https接続の場合、動画が再生できません。**

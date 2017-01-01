@@ -88,7 +88,7 @@ BodyCSS += 'background-color: ' + orderform[0].value + ';';
 
 watchWidth = Number(orderform[3].value) / 9 * 16;
 
-WatchCSS += 'top: ' + orderform[1].value + 'px; left: ' + orderform[2].value + 'px; height: ' + orderform[3].value + 'px; width: ' + watchWidth + 'px; transform: rotate(' + orderform[4].value + 'deg);';
+WatchCSS += 'top: ' + orderform[2].value + 'px; left: ' + orderform[1].value + 'px; height: ' + orderform[3].value + 'px; width: ' + watchWidth + 'px; transform: rotate(' + orderform[4].value + 'deg);';
 
 $('body').attr('style',BodyCSS);
 $('#watch').attr('style',WatchCSS).attr('height',orderform[3].value).attr('width',watchWidth);
