@@ -60,13 +60,13 @@ if(urlParam) {
   if(paramArray.id != void(2525) && paramArray.id.search('^[\w]+$') ){
     $('input[name="nico_id"]').val(paramArray.id);
   }
-  if(paramArray.h != void(898) && Number.isSafeInteger(paramArray.h)){
+  if(paramArray.h != void(898) && Number.isSafeInteger(Number(paramArray.h))){
     $('input[name="watch_h"]').val(Number(paramArray.h));
   }
-  if(paramArray.x != void(334) && Number.isSafeInteger(paramArray.x)){
+  if(paramArray.x != void(334) && Number.isSafeInteger(Number(paramArray.x))){
     $('input[name="x_point"]').val(Number(paramArray.x));
   }
-  if(paramArray.y != void(8901) && Number.isSafeInteger(paramArray.y)){
+  if(paramArray.y != void(8901) && Number.isSafeInteger(Number(paramArray.y))){
     $('input[name="y_point"]').val(Number(paramArray.y));
   }
   if(paramArray.bgcolor != void(1341) && paramArray.bgcolor.search('^[\w]+$')){
