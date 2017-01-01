@@ -46,8 +46,6 @@ http://tamaina.bikkuri.link/s_nico/?id=sm2064366&h=100
 
 http://tamaina.bikkuri.link/s_nico/?id=sm8628149&h=480&x=128&y=128
 
-?id=sm9&h=720&x=20&y=20&bgcolor=000000
-
 ## Others
 
 **https接続の場合、動画が再生できません。**
