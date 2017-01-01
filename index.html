@@ -81,8 +81,6 @@ var BodyCSS = "", WatchCSS = "", watchWidth = 0;
 
 var orderform = $('#orderform').serializeArray();
 
-console.table($('#orderform').serializeArray());
-
 BodyCSS += 'background-color: ' + orderform[0].value + ';';
 
 watchWidth = Number(orderform[3].value) / 9 * 16;
@@ -97,8 +95,6 @@ $('#watch').attr('style',WatchCSS).attr('height',orderform[3].value).attr('width
 function ChangeSrc(){
 
 var orderform = $('#orderform').serializeArray();
-
-console.table($('#orderform').serializeArray());
 
 watchSource = 'http://embed.nicovideo.jp/watch/' + orderform[4].value;
 
