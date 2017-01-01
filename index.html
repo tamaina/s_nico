@@ -98,9 +98,27 @@ var orderform = $('#orderform').serializeArray();
 
 watchSource = 'http://embed.nicovideo.jp/watch/' + orderform[4].value;
 
+thumbSource = 'http://ext.nicovideo.jp/thumb/' + orderform[4].value;
+
 $('#watch').attr('src',watchSource);
+$('#thumb').attr('src',thumbSource);
 
 }
+
+$(function() {
+  $(window).on('keydown', function(e) {
+    if(e.ctrlKey || e.keyCode == 13) {
+      $('.modal').modal('toggle')
+    }
+    if(e.keyCode == 70){
+      var elem = document.getElementById("watch");
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+      }
+    }
+  });
+});
+
 $(document).ready(function(){
   InportParam();
   $('input.colorpick').minicolors({
@@ -144,12 +162,12 @@ $(document).ready(function(){
 </p>
 </form>
 </div>
-
+<iframe src="http://ext.nicovideo.jp/thumb/sm30341975" scrolling="no" style="border:solid 1px #CCC;width: 100%;height: 176px;" frameborder="0" id="thumb"></iframe>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 <div class="open-setting" data-toggle="modal" data-backdrop="static"></div>
-<iframe id="watch"></iframe>
+<iframe id="watch" allowfullscreen></iframe>
   </body>
 </html>
